@@ -1,0 +1,12 @@
+<h1>
+    {{title}}
+</h1>
+
+<form (submit)="addDeal(deal.value)">
+    <input type="text" #deal>
+</form>
+    <ul>
+        <li *ngFor="let deal of deals; let i = index">
+            {{deal}} <button (click)="deleteDeal(i)">X</button>
+        </li>
+    </ul>
